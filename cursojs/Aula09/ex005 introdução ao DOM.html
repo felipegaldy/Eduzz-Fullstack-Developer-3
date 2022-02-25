@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            
+            background: rgb(53, 9, 9);
+            color: white;
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <p>Aqui vai o resultado</p>
+    <div id="msg">Clique em mim.<br></div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+        /*window.document.write(p1.innerText)// apresenta o texto sem formatação
+        corpo.style.background = 'black'
+        p1.style.color = 'blue'
+        document.write(p1.innerHTML)// escreve o texto com formatação 
+        window.alert(p1.innerHTML)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Meu estagio esta chegando'
+         var d = window.document.getElementsByName('msg')[0]
+         d.innerText = 'Ta cheganddo'*/
+        var d = window.document.querySelector('div#msg')
+        
+
+    </script>
+</body>
+</html>

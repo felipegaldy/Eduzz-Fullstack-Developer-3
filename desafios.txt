@@ -1,0 +1,42 @@
+No planeta Alpha vive a criatura Blobs, que come precisamente 1/2 de seu suprimento de comida disponível todos os dias. Escreva um algoritmo que leia a capacidade inicial de suprimento de comida (em Kg), e calcule quantos dias passarão antes que Blobs coma todo esse suprimento até restar um quilo ou menos.
+
+var n = parseInt(gets());
+
+//implemente sua solução nos espaços em branco
+
+while (n >=   1  && n <=     1000  ) {
+  var c = parseFloat(gets());
+  
+var dias =  0  ;
+  while ( c >  1 && c <= 1000 ) {
+    c = c / 2.0;
+    dias++;
+  }
+  n--;
+  print(`${dias}  dias`);
+}
+
+
+Faça a leitura de um valor inteiro. Em seguida, calcule o menor número de notas possíveis (cédulas) onde o valor pode ser decomposto. As notas que você deve considerar são de 100, 50, 20, 10, 5, 2 e 1. Na sequência mostre o valor lido e a relação de notas necessárias.
+
+Solução
+
+let n = parseInt(gets());
+let quantidadeNotas = 0;
+let cedulas = [100,50,20,10,5,2,1];
+
+// Função responsável por contar as notas a partir de um valor.
+function contaNotas(valor){
+  quantidadeNotas = parseInt(n/valor);
+
+  // TODO Subtraia de "n" a "quantidadeNotas" multiplicada por seu respectivo "valor" (parâmetro).
+  n -= quantidadeNotas * valor ;
+
+  console.log(`${quantidadeNotas} nota(s) de R$ ${valor},00`);
+}
+
+console.log(n);
+
+for(let cedula in cedulas){
+    contaNotas(cedulas[cedula]);
+}

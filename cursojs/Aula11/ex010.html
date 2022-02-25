@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            background: gray;
+            font: normal 20px Arial;
+            color: rgb(228, 216, 216);
+
+        
+        }
+
+        h1 {
+    
+        }
+        .res {
+
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>RADAR!</h1>
+    Velocidade:
+    <input type="number" name="velocidade" id="velocidade">KM/h
+    <input type="button" value="Registrar" onclick="calcular()">
+
+    <div id="res">
+
+
+    </div>
+
+    <div id="multa"> 
+
+    </div>
+
+    <script>
+        
+        
+        function calcular() {
+
+            var velocidade = window.document.getElementById("velocidade")
+            var res = window.document.querySelector('div#res')
+            var vel = Number(velocidade.value)
+            res.innerHTML = `<p>A sua velocidade atual é de <strong>${vel}</strong> KM/h</p>`
+            if (vel > 60) {
+                var valor = (vel-60)*5
+                res.innerHTML = `<p>Você está acima do limite de velocidade desta rodovia, <strong>você foi multado!</strong></p>`
+                //valor.toLocaleString('pt--BR',{style:'currency', currency: "BRL"})
+                multa.innerHTML += `<p>O valor da multa é de ${valor}</p>`
+            }
+            res.innerHTML += `<p>Dirija com sinto de segurança</p>`
+
+        }
+
+    </script>
+    
+</body>
+</html>

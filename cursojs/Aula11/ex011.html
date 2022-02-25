@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+    
+        body {
+            background: gray;
+            color: white;
+            font: normal 20px Arial;
+        }
+
+        .res {
+            font: normal 40px Arial;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1> </h1>
+    Qual pais você nasceu? <input type="text" name="nac" id="nac">
+     <input type="button" value="OK" onclick="calcular()">
+
+    <div id="res"> 
+
+
+    </div>
+
+    <script>
+
+        function calcular() {
+
+            var nac = window.document.querySelector("input#nac")
+            var res = window.document.querySelector("div#res")
+            var naci = String(nac.value)
+            
+            res.innerHTML = `<p>Bem Vindo!</p>`
+            
+            if (naci == 'Brasil') {
+
+                res.innerHTML = '<p> Você é brasileiro!'
+            } else {
+                res.innerHTML = '<p> Você é estrangeiro</p>'
+            }
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
